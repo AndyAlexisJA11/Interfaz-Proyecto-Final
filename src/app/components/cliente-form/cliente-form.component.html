@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Agregar Usuario</h5>
+          <form>
+            <div class="form-group">
+              <label for="Nombre">Nombre</label>
+              <input type="text" id="Nombre" name="Nombre" [(ngModel)]="cliente.Nombre" placeholder="Nombre" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Apellido">Apellido</label>
+              <input type="text" id="Apellido" name="Apellido" [(ngModel)]="cliente.Apellido" placeholder="Apellido" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Direccion">Dirección</label>
+              <input type="text" id="Direccion" name="Direccion" [(ngModel)]="cliente.Direccion" placeholder="Dirección" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Telefono">Teléfono</label>
+              <input type="text" id="Telefono" name="Telefono" [(ngModel)]="cliente.Telefono" placeholder="Teléfono" class="form-control" pattern="[0-9]*" inputmode="numeric">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary" (click)="edit ? updateCliente() : saveNewCliente()">
+                Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

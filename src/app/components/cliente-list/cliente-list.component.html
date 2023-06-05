@@ -1,0 +1,34 @@
+<div class="col-md-12">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.ID_Cliente }}</td>
+        <td>{{ cliente.Nombre }}</td>
+        <td>{{ cliente.Apellido }}</td>
+        <td>{{ cliente.Direccion }}</td>
+        <td>{{ cliente.Telefono }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteCliente(cliente.ID_Cliente)">
+            <i class="far fa-trash-alt"></i>
+          </button>
+          <a [routerLink]="['/clientes/edit', cliente.ID_Cliente]" class="btn btn-info">
+            Editar
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
